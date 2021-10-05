@@ -1,21 +1,22 @@
 package br.com.alura.loja.desconto;
 
-import br.com.alura.loja.orcamento.Orcamento;
-
 import java.math.BigDecimal;
 
-public  class SemDesconto extends Desconto {
+import br.com.alura.loja.orcamento.Orcamento;
 
-    public SemDesconto() {
-        super(null);
-    }
+public class SemDesconto extends Desconto {
 
-    public BigDecimal efetuarCalculo(Orcamento orcamento){
-     return BigDecimal.ZERO;
-    }
+	public SemDesconto() {
+		super(null);
+	}
 
-    @Override
-    public boolean deveAplicar(Orcamento orcamento) {
-        return true;
-    }
+	public BigDecimal efetuarCalculo(Orcamento orcamento) {
+		return BigDecimal.ZERO;
+	}
+
+	@Override
+	public boolean deveAplicar(Orcamento orcamento) {
+		return true;
+	}
+
 }
